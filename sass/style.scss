@@ -1,0 +1,26 @@
+/*!
+Theme Name: Five Loaves - Theme 01
+Author: James Elazegui
+Description: Five Loaves - custom theme.
+Version: 1.0
+*/
+
+// abstracts
+@import "./abstracts/variables";
+@import "./abstracts/colors";
+@import "./abstracts/effects";
+@import "./abstracts/typography";
+@import "./abstracts/breakpoints";
+
+// base
+@import "./base/reset";
+@import "./base/base";
+
+// layout
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
+
+// components
+@import "./components/buttons";
+@import "./components/cards";
