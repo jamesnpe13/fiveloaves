@@ -1,18 +1,19 @@
 <?php
 
 // scripts ands styles
-function load_assets()
-{
-	wp_enqueue_style('style', get_stylesheet_uri());
-}
+get_template_part("partials/functions", "scripts");
 
-add_action('wp_enqueue_scripts', 'load_assets');
+// register nav menus
+get_template_part("partials/functions", "nav-menus");
 
-// navigation menus
+// customization api
+get_template_part("partials/functions", "customization");
 
-register_nav_menus(
-	array(
-		'primary' => __('Header Menu'),
-		'secondary' => __('Footer Menu'),
-	)
-);
+// admin styles
+get_template_part("partials/functions", "admin-styles");
+
+// register post types
+get_template_part("partials/functions", "post-types");
+
+// register taxonomies
+get_template_part("partials/functions", "taxonomies");

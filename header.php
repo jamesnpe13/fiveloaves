@@ -13,7 +13,7 @@
 <body <?php body_class("page"); ?>>
 	<header class="header">
 		<div class="header__container">
-			<?php get_template_part("partials/navbar-main") ?>
+			<?php get_template_part("partials/frontend", "navbar-main") ?>
 		</div>
 	</header>
 	<main>
