@@ -1,0 +1,16 @@
+.breakline {
+	display: flex;
+	gap: 10px;
+	margin-block: 10px;
+
+	div {
+		height: 10px;
+		width: 10px;
+		background-color: white;
+		border-radius: 3px;
+
+		&:last-of-type {
+			width: 80px;
+		}
+	}
+}

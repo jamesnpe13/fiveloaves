@@ -1,20 +1,20 @@
-$color-primary-v1: "";
-$color-primary-v2: "";
-$color-primary-v3: "";
+$color-primary-v1: #fc8446;
+// $color-primary-v2: "";
+// $color-primary-v3: "";
 
-$color-secondary-v1: "";
-$color-secondary-v2: "";
-$color-secondary-v3: "";
+$color-secondary-v1: #17273f;
+$color-secondary-v2: #0a1629;
+// $color-secondary-v3: "";
 
-$color-tertiary-v1: "";
-$color-tertiary-v2: "";
-$color-tertiary-v3: "";
+// $color-tertiary-v1: "";
+// $color-tertiary-v2: "";
+// $color-tertiary-v3: "";
 
-$color-destructive: "";
+$color-destructive: #e93e3e;
 
-$color-white: "";
-$color-grey-80: "";
-$color-grey-60: "";
-$color-grey-40: "";
-$color-grey-20: "";
-$color-black: "";
+$color-white: #f8f8f8;
+$color-black: #262626;
+$color-grey-80: mix($color-black, $color-white, 80%);
+$color-grey-60: mix($color-black, $color-white, 60%);
+$color-grey-40: mix($color-black, $color-white, 40%);
+$color-grey-20: mix($color-black, $color-white, 20%);

@@ -1,6 +1,7 @@
-<?php wp_nav_menu(
-	array(
-		'theme_location' => 'primary',
-		'container' => 'nav'
-	)
-);
+<?php
+
+
+wp_nav_menu(array(
+	'container' => "nav",
+	'theme_location' => 'primary',
+));

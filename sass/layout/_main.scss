@@ -1,14 +1,32 @@
 body {
 	section {
-		border: 5px solid blue;
 		max-width: 100vw;
-		height: 500px;
+		height: auto;
 		display: flex;
 		justify-content: center;
 		padding: $padding_section;
-		
+
+		&:first-of-type {
+			min-height: 100vh;
+			padding-top: $height-header;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.section__container {
+				max-width: $width-max_section-hero;
+				display: flex;
+				flex-direction: column;
+				gap: 40px;
+
+				p.hero {
+					width: min(100%, 800px);
+				}
+			}
+		}
+
 		.section__container {
-			border: 5px solid red;
+			min-height: 200px;
 			height: 100%;
 			max-width: $width-max_section__container;
 			width: 100%;

@@ -1,18 +1,17 @@
 .footer {
 	max-width: 100vw;
-	border: 5px solid blue;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-
+	display: none;
+	
 	&__main {
-		border: 3px solid green;
 		max-width: $width-max_section__container;
 		width: 100%;
 		padding: $padding_section;
+
 		&__container {
-			border: 5px solid red;
 		}
 	}
 
@@ -21,7 +20,6 @@
 		width: 100%;
 
 		& > div {
-			border: 3px solid green;
 			height: 100px;
 			width: 100%;
 		}

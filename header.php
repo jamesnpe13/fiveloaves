@@ -12,8 +12,19 @@
 
 <body <?php body_class("page"); ?>>
 	<header class="header">
+		<div class="logo-container">
+			<?php echo get_custom_logo() ?>
+		</div>
+
 		<div class="header__container">
 			<?php get_template_part("partials/frontend", "navbar-main") ?>
+
+			<a href="#" class="button primary contact-button">
+				<span>
+					Get in touch
+				</span>
+			</a>
+
 		</div>
 	</header>
 	<main>
