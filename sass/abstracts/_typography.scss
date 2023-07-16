@@ -13,7 +13,8 @@ body {
 }
 
 // Hero header
-h1.hero {
+h1.hero,
+h2.hero {
 	font-family: "Shadows Into Light", sans-serif;
 	font-size: 10rem;
 	line-height: 11rem;
@@ -29,7 +30,7 @@ p.hero {
 // Section header
 h2 {
 	font-family: "Shadows Into Light", sans-serif;
-	font-size: 3rem;
+	font-size: 4rem;
 	line-height: 4rem;
 }
 
@@ -50,7 +51,9 @@ p {
 
 		&.current_page_item {
 			a {
-				color: $color-primary-v1;
+				color: $color-white;
+				border-bottom: 3px solid $color-primary-v1;
+				padding-bottom: 4px;
 			}
 		}
 	}
@@ -64,10 +67,18 @@ p {
 
 // Footer nav links
 .footer {
-	.page_item {
+	.menu-item {
 		a {
 			font-size: 0.9rem;
+			font-weight: 400;
 			cursor: pointer;
+			color: $color-white;
+		}
+
+		&.current_page_item {
+			a {
+				color: $color-primary-v1;
+			}
 		}
 	}
 }

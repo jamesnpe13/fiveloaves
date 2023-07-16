@@ -1,10 +1,21 @@
-.background-image {
-	width: 100%;
-	height: 100vh;
-	object-fit: cover;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: -100;
-	filter: brightness(0.75) contrast(0.9);
+section {
+	&.hero {
+	}
+
+	&.menus {
+		height: 100vh;
+
+		.section__container {
+			gap: 15px;
+		}
+
+		.button-container {
+			display: flex;
+			gap: 20px;
+		}
+	}
+
+	&.about {
+		
+	}
 }

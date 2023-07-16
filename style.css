@@ -15,7 +15,8 @@ body {
   font-size: 1.2rem;
 }
 
-h1.hero {
+h1.hero,
+h2.hero {
   font-family: "Shadows Into Light", sans-serif;
   font-size: 10rem;
   line-height: 11rem;
@@ -29,7 +30,7 @@ p.hero {
 
 h2 {
   font-family: "Shadows Into Light", sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 4rem;
 }
 
@@ -44,7 +45,9 @@ p {
   color: #f8f8f8;
 }
 .header .menu-item.current_page_item a {
-  color: #fc8446;
+  color: #f8f8f8;
+  border-bottom: 3px solid #fc8446;
+  padding-bottom: 4px;
 }
 
 .button span {
@@ -52,9 +55,14 @@ p {
   cursor: pointer;
 }
 
-.footer .page_item a {
+.footer .menu-item a {
   font-size: 0.9rem;
+  font-weight: 400;
   cursor: pointer;
+  color: #f8f8f8;
+}
+.footer .menu-item.current_page_item a {
+  color: #fc8446;
 }
 
 p.footer {
@@ -165,6 +173,7 @@ body {
   background-color: rgba(92, 92, 92, 0.171);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  z-index: 100;
 }
 .header .logo-container {
   background-color: #f8f8f8;
@@ -205,7 +214,11 @@ body section {
   height: auto;
   display: flex;
   justify-content: center;
-  padding: 20px 20px;
+  position: relative;
+  min-height: 200px;
+}
+body section h2 {
+  text-align: center;
 }
 body section:first-of-type {
   min-height: 100vh;
@@ -218,16 +231,104 @@ body section:first-of-type .section__container {
   max-width: 1500px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 40px;
+  text-align: start;
+}
+body section:first-of-type .section__container.centered {
+  align-items: center;
+  text-align: center;
 }
 body section:first-of-type .section__container p.hero {
   width: min(100%, 800px);
 }
 body section .section__container {
-  min-height: 200px;
   height: 100%;
   max-width: 1200px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+body section .section-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.75) contrast(0.9);
+}
+body section.single {
+  padding: 20px 50px;
+  flex-direction: row;
+  padding-block: 50px;
+}
+body section.double {
+  padding: 0;
+  flex-direction: row;
+}
+body section.double .panel {
+  width: 100%;
+  min-height: 200px;
+}
+body section.double .panel img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section.double .panel__container {
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+body section.double .panel.white {
+  background-color: #f8f8f8;
+  gap: 20px;
+}
+body section.double .panel.secondary {
+  background-color: #17273f;
+}
+body section.images {
+  width: 100%;
+}
+body section.images img {
+  aspect-ratio: 1/1;
+  width: 33.3333333333%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section.primary {
+  background-color: #f8f8f8;
+}
+body section.secondary {
+  background-color: rgba(50, 80, 123, 0.6784313725);
+}
+body section.blur {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+body .background-image {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  filter: brightness(0.7) contrast(0.9);
 }
 
 .footer {
@@ -236,30 +337,86 @@ body section .section__container {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  display: none;
+  background-color: #17273f;
 }
 .footer__main {
   max-width: 1200px;
   width: 100%;
-  padding: 20px 20px;
+  padding: 20px 50px;
+  padding-block: 50px;
+}
+.footer__main__container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.footer__main__container .menu {
+  justify-content: center;
+  display: flex;
+  gap: 40px;
+}
+.footer__main__container p {
+  text-align: center;
+}
+.footer__main__container .sm-icons__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.footer__main__container .sm-icons__container a {
+  height: -moz-max-content;
+  height: max-content;
+  display: grid;
+  place-content: center;
+}
+.footer__main__container .sm-icons__container a img {
+  height: 25px;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .footer__footer {
   display: flex;
   width: 100%;
 }
-.footer__footer > div {
-  height: 100px;
+.footer__footer div {
   width: 100%;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-inline: 20px;
+}
+.footer__footer div:first-of-type {
+  background-color: #f8f8f8;
+}
+.footer__footer div:last-of-type {
+  background-color: #0a1629;
+}
+.footer__footer div:last-of-type p {
+  width: 100%;
+  background-color: transparent;
+  display: block;
+  text-align: right;
 }
 
 .button {
-  padding: 8px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 32px;
+  padding-block: 8px;
   border-radius: 6px;
   filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.37));
+}
+.button span {
+  width: 100%;
+  text-align: center;
 }
 .button.primary {
   background-color: #fc8446;
   color: #f8f8f8;
+  border: 1px solid #974f2a;
 }
 .button.secondary {
   background-color: #17273f;
@@ -272,6 +429,10 @@ body section .section__container {
 .button.destructive {
   background-color: #e93e3e;
   color: #f8f8f8;
+}
+.button.fixed-width {
+  min-width: 150px;
+  padding-inline: 0;
 }
 
 .breakline {
@@ -288,15 +449,17 @@ body section .section__container {
 .breakline div:last-of-type {
   width: 80px;
 }
+.breakline.secondary div {
+  background-color: #17273f;
+}
 
-.background-image {
-  width: 100%;
+section.menus {
   height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  filter: brightness(0.75) contrast(0.9);
+}
+section.menus .section__container {
+  gap: 15px;
+}
+section.menus .button-container {
+  display: flex;
+  gap: 20px;
 }/*# sourceMappingURL=style.css.map */

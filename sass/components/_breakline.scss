@@ -13,4 +13,10 @@
 			width: 80px;
 		}
 	}
+
+	&.secondary {
+		div {
+			background-color: $color-secondary-v1;
+		}
+	}
 }

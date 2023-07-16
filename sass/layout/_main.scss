@@ -4,7 +4,12 @@ body {
 		height: auto;
 		display: flex;
 		justify-content: center;
-		padding: $padding_section;
+		position: relative;
+		min-height: 200px;
+
+		h2 {
+			text-align: center;
+		}
 
 		&:first-of-type {
 			min-height: 100vh;
@@ -17,7 +22,14 @@ body {
 				max-width: $width-max_section-hero;
 				display: flex;
 				flex-direction: column;
+				align-items: flex-start;
 				gap: 40px;
+				text-align: start;
+
+				&.centered {
+					align-items: center;
+					text-align: center;
+				}
 
 				p.hero {
 					width: min(100%, 800px);
@@ -26,10 +38,106 @@ body {
 		}
 
 		.section__container {
-			min-height: 200px;
 			height: 100%;
 			max-width: $width-max_section__container;
 			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			gap: 20px;
 		}
+
+		.section-background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+			filter: brightness(0.75) contrast(0.9);
+		}
+	}
+
+	section.single {
+		padding: $padding_section;
+		flex-direction: row;
+		padding-block: 50px;
+	}
+
+	section.double {
+		padding: 0;
+		flex-direction: row;
+
+		.panel {
+			width: 100%;
+			min-height: 200px;
+
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+
+			&__container {
+				padding: 30px;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 20px;
+				text-align: center;
+			}
+
+			&.white {
+				background-color: $color-white;
+				gap: 20px;
+			}
+
+			&.secondary {
+				background-color: $color-secondary-v1;
+			}
+		}
+	}
+
+	section.tabs {
+		// 
+	}
+
+	section.images {
+		width: 100%;
+		img {
+			aspect-ratio: 1 / 1;
+			width: calc(100% / 3);
+			object-fit: cover;
+		}
+	}
+
+	section {
+		&.primary {
+			background-color: $color-white;
+		}
+
+		&.secondary {
+			background-color: #32507bad;
+		}
+
+		&.blur {
+			backdrop-filter: blur(10px);
+		}
+	}
+
+	.background-image {
+		width: 100%;
+		height: 100vh;
+		object-fit: cover;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -100;
+		filter: brightness(0.7) contrast(0.9);
 	}
 }

@@ -1,6 +1,5 @@
-<?php wp_nav_menu(
-	array(
-		'theme_location' => 'footer',
-		'container' => 'nav'
-	)
-);
+<?php 
+wp_nav_menu(array(
+	'container' => "nav",
+	'theme_location' => 'secondary',
+));

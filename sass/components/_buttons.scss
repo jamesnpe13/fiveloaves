@@ -1,11 +1,21 @@
 .button {
-	padding: 8px 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-inline: 32px;
+	padding-block: 8px;
 	border-radius: 6px;
-		filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.37));
+	filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.37));
+
+	span {
+		width: 100%;
+		text-align: center;
+	}
 
 	&.primary {
 		background-color: $color-primary-v1;
 		color: $color-white;
+		border: 1px solid mix(black, $color-primary-v1, 40%);
 	}
 	&.secondary {
 		background-color: $color-secondary-v1;
@@ -18,5 +28,10 @@
 	&.destructive {
 		background-color: $color-destructive;
 		color: $color-white;
+	}
+
+	&.fixed-width {
+		min-width: 150px;
+		padding-inline: 0;
 	}
 }
