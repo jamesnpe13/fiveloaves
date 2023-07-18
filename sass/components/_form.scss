@@ -1,0 +1,37 @@
+.wpcf7 {
+	max-width: 500px;
+	width: 100%;
+}
+form {
+	
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	.form-input,
+	.form-area {
+		width: 100%;
+		padding: 5px 15px;
+		border-radius: 5px;
+		border: 1px solid mix($color-secondary-v1, white, 30%);
+
+		&:focus {
+			outline: $color-primary-v1 1px solid;
+		}
+	}
+
+	.form-area {
+		resize: none;
+	}
+
+	.wpcf7-not-valid-tip {
+		font-size: 0.8rem;
+		color: $color-destructive;
+		margin-top: 10px;
+	}
+
+	input[type="submit"] {
+		margin-left: auto;
+	}
+}

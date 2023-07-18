@@ -18,8 +18,8 @@ body {
 h1.hero,
 h2.hero {
   font-family: "Shadows Into Light", sans-serif;
-  font-size: 10rem;
-  line-height: 11rem;
+  font-size: 8rem;
+  line-height: 10rem;
   font-weight: 100;
 }
 
@@ -89,20 +89,27 @@ span.price {
   font-weight: 400;
 }
 
+p.list {
+  font-size: 1rem;
+  font-style: italic;
+}
+
 input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, textarea::-moz-placeholder {
-  color: red;
+  color: rgb(151, 151, 151);
 }
 
 input[type=text]::placeholder,
 input[type=email]::placeholder,
 textarea::placeholder {
-  color: red;
+  color: rgb(151, 151, 151);
 }
 
 input[type=text],
 input[type=email],
 textarea {
-  color: blue;
+  color: #17273f;
+  font-size: 0.9rem;
+  font-family: "Rubik", sans-serif;
 }
 
 p.white,
@@ -300,16 +307,25 @@ body section.double .panel.white {
 body section.double .panel.secondary {
   background-color: #17273f;
 }
+body section.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: auto;
+}
+body section.tabs .section__container {
+  padding: 20px 50px;
+}
 body section.images {
   width: 100%;
 }
 body section.images img {
-  aspect-ratio: 1/1;
+  aspect-ratio: 3/2;
   width: 33.3333333333%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body section.primary {
+body section.white {
   background-color: #f8f8f8;
 }
 body section.secondary {
@@ -400,7 +416,8 @@ body .background-image {
   text-align: right;
 }
 
-.button {
+.button,
+input[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -409,30 +426,42 @@ body .background-image {
   border-radius: 6px;
   filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.37));
 }
-.button span {
+.button span,
+input[type=submit] span {
   width: 100%;
   text-align: center;
 }
-.button.primary {
+.button.primary,
+input[type=submit].primary {
   background-color: #fc8446;
   color: #f8f8f8;
   border: 1px solid #974f2a;
 }
-.button.secondary {
+.button.secondary,
+input[type=submit].secondary {
   background-color: #17273f;
   color: #f8f8f8;
 }
-.button.white {
+.button.white,
+input[type=submit].white {
   background-color: #f8f8f8;
   color: #17273f;
 }
-.button.destructive {
+.button.destructive,
+input[type=submit].destructive {
   background-color: #e93e3e;
   color: #f8f8f8;
 }
-.button.fixed-width {
+.button.fixed-width,
+input[type=submit].fixed-width {
   min-width: 150px;
   padding-inline: 0;
+}
+.button.form-button,
+input[type=submit].form-button {
+  background-color: #fc8446;
+  color: #f8f8f8;
+  border: 1px solid #974f2a;
 }
 
 .breakline {
@@ -453,6 +482,92 @@ body .background-image {
   background-color: #17273f;
 }
 
+.tabs__container {
+  height: 60px;
+  width: 100%;
+  display: flex;
+}
+.tabs__container div.tab {
+  background-color: #17273f;
+  height: 100%;
+  width: -moz-max-content;
+  width: max-content;
+  display: grid;
+  place-content: center;
+  padding-inline: 25px;
+  border-right: 1px solid #f8f8f8;
+}
+.tabs__container div.tab h4.tab {
+  color: #f8f8f8;
+}
+.tabs__container div.tab:last-of-type {
+  border: none;
+}
+.tabs__container div.tab.selected {
+  background-color: #f8f8f8;
+}
+.tabs__container div.tab.selected h4.tab {
+  color: #17273f;
+}
+
+.category__group {
+  width: 100%;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.category__group h2 {
+  margin-bottom: 30px;
+}
+.category__group .list-item {
+  border-bottom: 1px solid #17273f;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.category__group .list-item .title-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.wpcf7 {
+  max-width: 500px;
+  width: 100%;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form .form-input,
+form .form-area {
+  width: 100%;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid #b9bec5;
+}
+form .form-input:focus,
+form .form-area:focus {
+  outline: #fc8446 1px solid;
+}
+form .form-area {
+  resize: none;
+}
+form .wpcf7-not-valid-tip {
+  font-size: 0.8rem;
+  color: #e93e3e;
+  margin-top: 10px;
+}
+form input[type=submit] {
+  margin-left: auto;
+}
+
 section.menus {
   height: 100vh;
 }
@@ -462,4 +577,51 @@ section.menus .section__container {
 section.menus .button-container {
   display: flex;
   gap: 20px;
+}
+body.menu section.list {
+  padding-inline: 20px;
+}
+body.menu section.list .section__container {
+  gap: 50px;
+}
+body.catering section.list {
+  padding-inline: 20px;
+}
+body.catering section.list .section__container {
+  gap: 50px;
+}
+body.catering section.contact {
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+body.catering section.contact .section__container {
+  gap: 50px;
+}
+body.catering section.contact .section__container .panel {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+body.contact .map {
+  width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body.contact .section__container {
+  padding: 20px 50px;
+  align-items: flex-start;
+}
+body.contact .section__container img {
+  max-width: 200px;
+  max-height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body.contact .section__container p {
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */

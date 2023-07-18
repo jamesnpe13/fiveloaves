@@ -16,8 +16,8 @@ body {
 h1.hero,
 h2.hero {
 	font-family: "Shadows Into Light", sans-serif;
-	font-size: 10rem;
-	line-height: 11rem;
+	font-size: 8rem;
+	line-height: 10rem;
 	font-weight: 100;
 }
 
@@ -112,6 +112,12 @@ span.price {
 	font-weight: 400;
 }
 
+// item description
+p.list {
+	font-size: 1rem;
+	font-style: italic;
+}
+
 // Input globals
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
@@ -125,14 +131,16 @@ textarea {
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 textarea::placeholder {
-	color: red;
+	color: rgb(151, 151, 151);
 }
 
 // Input user
 input[type="text"],
 input[type="email"],
 textarea {
-	color: blue;
+	color: $color-secondary-v1;
+	font-size: 0.9rem;
+	font-family: "Rubik", sans-serif;
 }
 
 p,

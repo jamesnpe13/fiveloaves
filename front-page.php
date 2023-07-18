@@ -81,6 +81,15 @@
 	</div>
 </section>
 
+<section class="images">
+	<img src="<?php echo get_template_directory_uri(); ?>/images/coffee2.jpg
+" alt="">
+	<img src="<?php echo get_template_directory_uri(); ?>/images/cake.jpg
+" alt="">
+	<img src="<?php echo get_template_directory_uri(); ?>/images/tacos.jpg
+" alt="">
+</section>
+
 
 
 

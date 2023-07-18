@@ -1,0 +1,31 @@
+.tabs__container {
+	height: 60px;
+	width: 100%;
+	display: flex;
+
+	div.tab {
+		background-color: $color-secondary-v1;
+		height: 100%;
+		width: max-content;
+		display: grid;
+		place-content: center;
+		padding-inline: 25px;
+		border-right: 1px solid $color-white;
+
+		h4.tab {
+			color: $color-white;
+		}
+
+		&:last-of-type {
+			border: none;
+		}
+
+		&.selected {
+			background-color: $color-white;
+
+			h4.tab {
+				color: $color-secondary-v1;
+			}
+		}
+	}
+}

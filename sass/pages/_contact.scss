@@ -1,0 +1,21 @@
+body.contact {
+	.map {
+		width: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	.section__container {
+		padding: $padding_section;
+		align-items: flex-start;
+
+		img {
+			max-width: 200px;
+			max-height: 50px;
+			object-fit: contain;
+		}
+		p {
+			text-align: left;
+		}
+	}
+}

@@ -1,4 +1,5 @@
-.button {
+.button,
+input[type="submit"] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -33,5 +34,11 @@
 	&.fixed-width {
 		min-width: 150px;
 		padding-inline: 0;
+	}
+
+	&.form-button {
+		background-color: $color-primary-v1;
+		color: $color-white;
+		border: 1px solid mix(black, $color-primary-v1, 40%);
 	}
 }

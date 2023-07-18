@@ -8,3 +8,19 @@ function remove_pages_editor()
 }
 
 add_action('init', 'remove_pages_editor');
+
+// hide admin panel tabs
+function admin_styles()
+{
+	echo "
+	<style>
+	#menu-posts,
+	#menu-media,
+	#menu-comments {
+		display: none;
+	}
+	</style>
+	";
+}
+
+add_action("admin_head", "admin_styles");

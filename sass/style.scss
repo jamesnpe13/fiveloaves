@@ -15,6 +15,7 @@ Version: 1.0
 // base
 @import "./base/reset";
 @import "./base/base";
+@import "./base/media-queries";
 
 // layout
 @import "./layout/header";
@@ -26,7 +27,11 @@ Version: 1.0
 @import "./components/cards";
 @import "./components/breakline";
 @import "./components/tabs";
+@import "./components/list-item";
+@import "./components/form";
 
 // pages
 @import "./pages/home";
 @import "./pages/menu";
+@import "./pages/catering";
+@import "./pages//contact";

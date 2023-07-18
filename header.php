@@ -10,7 +10,14 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class("page"); ?>>
+
+<?php
+$slug = get_post_field('post_name', get_post());
+?>
+
+
+
+<body <?php body_class($slug); ?>>
 	<header class="header">
 		<div class="logo-container">
 			<?php echo get_custom_logo() ?>
@@ -18,12 +25,14 @@
 
 		<div class="header__container">
 			<?php get_template_part("partials/frontend", "navbar-main") ?>
+			
 
-			<a href="#" class="button primary contact-button">
+			<a href="<?php echo site_url(); ?>/contact" class="button primary contact-button">
 				<span>
 					Get in touch
 				</span>
 			</a>
+
 
 		</div>
 	</header>
